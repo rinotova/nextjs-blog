@@ -6,14 +6,14 @@ const Hero = () => {
     <section className={classes.hero}>
       <div className={classes.image}>
         <Image
-          src='/images/site/rino.png'
-          alt='An image of the author'
+          src="/images/site/rino.png"
+          alt="An image of the author"
           width={300}
           height={300}
         />
       </div>
       <h1>Hi, I am Rino</h1>
-      <p>I blog about web development.</p>
+      <p>I am successful businessman.</p>
     </section>
   );
 };

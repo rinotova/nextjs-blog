@@ -51,11 +51,9 @@ function PostContent(props) {
     code(code) {
       const { language, value } = code;
       return (
-        <SyntaxHighlighter
-          style={atomDark}
-          language={language}
-          children={value}
-        />
+        <SyntaxHighlighter style={atomDark} language={language}>
+          {value}
+        </SyntaxHighlighter>
       );
     },
   };
