@@ -30,10 +30,19 @@ export const getStaticPaths = async () => {
 export const getStaticProps = (ctx) => {
   const { params } = ctx;
   const { slug } = params;
-  const post = getPostData(slug);
+  let notFound = false;
+  let post;
+  try {
+    post = getPostData(slug);
+  } catch {
+    notFound = true;
+  }
+  console.log(post);
   return {
     props: {
       post,
     },
+    revalidate: 600,
+    notFound,
   };
 };
